@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Instruction following policies can be autonomously improved by a foundation model powered data collection system and learning algorithm.">
+  <meta name="keywords" content="Autonomous Improvement, Instruction Following Skills, Scaled Data Collection">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Autonomous Improvement of Instruction Following Skills via Foundation Models</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">SOAR: Autonomous Improvement of Instruction Following Skills via Foundation Models</h1>
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              In Submission</span>
+          </div> -->
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/soar-autonomous-improvement/code-release"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data (Coming Soon!)</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/scaled_autonomous_robots.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        SOAR combines three ingredients to make autonomous improvement of instruction following policies practical: autonomous data collection that scales to a fleet of robots, VLM guidance to collect data for semantically interesting tasks, and a self-supervised improvement algorithm.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            Intelligent robots capable of improving from autonomously collected experience have the potential to transform robot learning: instead of collecting costly teleoperated demonstration data, large-scale deployment of fleets of robots can quickly collect larger quantities of autonomous data useful for training better robot policies. However, autonomous improvement requires solving two key problems: (i) fully automating a scalable data collection procedure that can collect diverse and semantically meaningful robot data and (ii) learning from non-optimal, autonomous data with no human annotations. To this end, we propose a novel approach that addresses these challenges, allowing instruction following policies to improve from autonomously collected data without human supervision. Our framework leverages vision-language models to collect and evaluate semantically meaningful experiences in new environments, and then utilizes a decomposition of instruction following tasks into (semantic) language-conditioned image generation and (non-semantic) goal reaching, which makes it significantly more practical to improve from this autonomously collected data without any human annotations.
+          </p>    
+        </div>
+      </div>
+    </div> -->
+    <!--/ Abstract. -->
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+      <h2 class="title is-3">Overview</h2>
+      <video id="teaser" autoplay muted playsinline height="100%">
+        <source src="./static/videos/animated_diagram.mp4"
+                type="video/mp4">
+      </video>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns">
+      <div class="column">
+        <div class="content has-text-justified">
+          <p>
+            The standard paradigm for improving instruction following policies involves a human manually collecting 
+            additional robot data, labelling it with language instructions, and then finetuning the policy on this data.
+            This is an expensive endeavor, especially when improvement is desired over a multitude of environments.
+            Can we instead leverage the policy's pre-existing capabilities to bootstrap a self-improvement process?
+          </p>
+          <p>
+            We present SOAR, a general-purpose robot learning system capable of autonomously improving instruction 
+            following policies. SOAR first decouples a language conditioned policy into an image-goal conditioned policy 
+            and a language conditioned image subgoal generator. With such a formulation, any autonomously collected data
+            can be used for learning with an entirely self-supervised learning algorithm, namely hindsight-relabeled 
+            goal conditioned learning. The semantic instruction following component can then leverage the Internet-scale 
+            knowledge of semantics stored in VLMs. VLMs can be used as task proposers to bias the policy to learn to reach 
+            semantically interesting goals, and the same VLMs can automate the success detection of autonomously collected 
+            trajectories. The image-subgoal generator, also a VLM, can leverage its Internet pretraining to propose coherent, 
+            language-aligned goal images in unseen environments with unseen objects, the types of environments we most want 
+            policies to improve in. When these components are put together, SOAR becomes an end-to-end system for autonomous
+            improvement. SOAR can successfuly be deployed on a fleet of 5 WidowX robots to improve a language-conditioned policy on 
+            9 different environments, collecting in the process over 25,000 autonomous trajectories in just a matter of a few weeks.
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+   <h2 class="title is-3">Decomposed Instruction Following Policy</h2>
+   <img id="teaser" src="./static/images/susie_rollout.png" alt="Decomposed Instruction Following Policy" height="100%">
+  </div>
+ </section>
+
+ <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns">
+      <div class="column">
+        <div class="content has-text-justified">
+          <p>
+            We insantiate our instruction following policy with <a href="https://rail-berkeley.github.io/susie/">SuSIE</a>, 
+            a language conditioned policy decomposed as a goal conditioned policy and an 
+            <a href="https://www.timothybrooks.com/instruct-pix2pix">InstructPix2Pix</a> style language conditioned 
+            image editing model. Language task commands from the VLM are converted into subgoal images with the diffusion 
+            model, after which the goal conditioned policy is rolled out for a number of timesteps. Then, a new subgoal is 
+            generated with the same language instruction, and the process repeats until the end of the trajectory. 
+          </p>
+          <p>
+            In the context of autonomous improvement, such a formulation is very useful. Semantics are separated from 
+            motor skills, allowing the former to leverage cheap Internet-data and the latter cheap autonomously collected 
+            data. Goal conditioned learning provides a more dense learning signal than language conditioned learning, 
+            and can better leverage suboptimal data. And the goal conditioned policy can be trained with purely 
+            self-supervised objectives, in contrast to a direct language conditioned policy, which would require a separate 
+            model to hindsight relabel autonomous trajectories with language.
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+   <h2 class="title is-3">Improvement Results</h2>
+   <img id="teaser" src="./static/images/improvement_result_1.png" alt="Decomposed Instruction Following Policy" height="100%">
+  </div>
+ </section>
+
+ <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns">
+      <div class="column">
+        <div class="content has-text-justified">
+          <p>
+            To test the improvement capabilities of SOAR, we deploy the system on nine different scenes, and on each 
+            of these scenes evaluate its ability to collect semantically useful autonomous data and subsequently 
+            learn from the data. The ability to improve is a test of both the learning procedure and the data collection 
+            procedure; if data for skills semantically relevant to the downstream tested skills has not been collected, 
+            improvement will not be evident. We find that indeed, SOAR enables improvement for multiple language skills 
+            on each of these nine scenes, with an average success rate improvement of 31%.
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+   <img id="teaser" src="./static/images/improvement_result_2.png" alt="Decomposed Instruction Following Policy" height="100%">
+  </div>
+ </section>
+
+ <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns">
+      <div class="column">
+        <div class="content has-text-justified">
+          <p>
+            We even see positive transfer. When we train a single generalist policy on all of the collected autonomous data 
+            across the nine scenes, average success rate is 7% higher. We also ask the question whether the decomposed 
+            language conditioned policy, GCBC+SuSIE, is really needed. To answer this we train a direct language conditioned behavior cloning (LCBC)
+            policy on the autonomous data collected by GCBC+SuSIE. While improvement is obtained by LCBC, the final performance 
+            of the decomposed policy in SOAR is considerably better. We attribute this to the increased supervision provided by 
+            a goal image than a language instruction, and the better capability of goal conditioned learning to transfer
+            suboptimality in an autonomous trajectory into optimality for reaching the goal that was achieved.
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+   <h2 class="title is-3">SOAR-Data</h2>
+   <img id="teaser" src="./static/images/soar_data.png" alt="Decomposed Instruction Following Policy" height="100%">
+  </div>
+ </section>
+
+ <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns">
+      <div class="column">
+        <div class="content has-text-justified">
+          <p>
+            We also release as a secondary contribution the autonomous dataset collected by our deployment of SOAR.
+            This dataset, SOAR-Data, consists of more than 25,000 trajectories (2.5M transitions) collected with
+            over 50 different sets of objects across 5 different table top setups. Each trajectory in SOAR-Data
+            comes with language annotations (from a VLM), 5 commanded subgoal images generated by SuSIE
+            during one episode, and a task success label predicted by the VLM. SOAR-Data is similar in size
+            compared to other current robotic datasets, but is collected under much smaller time frames (in a
+            matter of weeks) with minimal human effort in the loop. As SOAR-Data consists both of failure and success 
+            trajectories, contains diverse scenes and objects, includes language instructions and 
+            subgoal images, and is collected with a publicly available low-cost robotic arm, we hope it will be a 
+            useful resource for offline reinforcement learning research.
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <!-- <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>
+            under a 
+            <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
