@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="Instruction following policies can be autonomously improved by a foundation model powered data collection system and learning algorithm.">
+  <meta name="keywords" content="Autonomous Improvement, Instruction Following Skills, Scaled Data Collection">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>Autonomous Improvement of Instruction Following Skills via Foundation Models</title>
 
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,7 +30,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/favicon.ico">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -40,7 +40,7 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
@@ -78,7 +78,7 @@
     </div>
 
   </div>
-</nav>
+</nav> -->
 
 
 <section class="hero">
@@ -86,38 +86,16 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
-          <div class="is-size-5 publication-authors">
+          <h1 class="title is-1 publication-title">SOAR: Autonomous Improvement of Instruction Following Skills via Foundation Models</h1>
+          <!-- <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
-          </div>
+              In Submission</span>
+          </div> -->
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://arxiv.org/pdf/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -134,9 +112,9 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -144,10 +122,10 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/soar-autonomous-improvement/code-release"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -157,12 +135,12 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>Data</span>
+                  <span>Data (Coming Soon!)</span>
                   </a>
             </div>
 
@@ -177,20 +155,18 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
+        <source src="./static/videos/scaled_autonomous_robots.mp4"
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        SOAR combines three ingredients to make autonomous improvement of instruction following policies practical: autonomous data collection that scales to a fleet of robots, VLM guidance to collect data for semantically interesting tasks, and a self-supervised improvement algorithm.
       </h2>
     </div>
   </div>
 </section>
 
 
-<section class="hero is-light is-small">
+<!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -245,216 +221,179 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
-
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
-          </p>
+            Intelligent robots capable of improving from autonomously collected experience have the potential to transform robot learning: instead of collecting costly teleoperated demonstration data, large-scale deployment of fleets of robots can quickly collect larger quantities of autonomous data useful for training better robot policies. However, autonomous improvement requires solving two key problems: (i) fully automating a scalable data collection procedure that can collect diverse and semantically meaningful robot data and (ii) learning from non-optimal, autonomous data with no human annotations. To this end, we propose a novel approach that addresses these challenges, allowing instruction following policies to improve from autonomously collected data without human supervision. Our framework leverages vision-language models to collect and evaluate semantically meaningful experiences in new environments, and then utilizes a decomposition of instruction following tasks into (semantic) language-conditioned image generation and (non-semantic) goal reaching, which makes it significantly more practical to improve from this autonomously collected data without any human annotations.
+          </p>    
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Abstract. -->
 
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+      <h2 class="title is-3">Overview</h2>
+      <video id="teaser" autoplay muted playsinline height="100%">
+        <source src="./static/videos/animated_diagram.mp4"
+                type="video/mp4">
+      </video>
   </div>
 </section>
 
 
 <section class="section">
   <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
+    <div class="columns">
       <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
+            The standard paradigm for improving instruction following policies involves a human manually collecting 
+            additional robot data, labelling it with language instructions, and then finetuning the policy on this data.
+            This is an expensive endeavor, especially when improvement is desired over a multitude of environments.
+            Can we instead leverage the policy's pre-existing capabilities to bootstrap a self-improvement process?
           </p>
           <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
+            We present SOAR, a general-purpose robot learning system capable of autonomously improving instruction 
+            following policies. SOAR first decouples a language conditioned policy into an image-goal conditioned policy 
+            and a language conditioned image subgoal generator. With such a formulation, any autonomously collected data
+            can be used for learning with an entirely self-supervised learning algorithm, namely hindsight-relabeled 
+            goal conditioned learning. The semantic instruction following component can then leverage the Internet-scale 
+            knowledge of semantics stored in VLMs. VLMs can be used as task proposers to bias the policy to learn to reach 
+            semantically interesting goals, and the same VLMs can automate the success detection of autonomously collected 
+            trajectories. The image-subgoal generator, also a VLM, can leverage its Internet pretraining to propose coherent, 
+            language-aligned goal images in unseen environments with unseen objects, the types of environments we most want 
+            policies to improve in. When these components are put together, SOAR becomes an end-to-end system for autonomous
+            improvement. SOAR can successfuly be deployed on a fleet of 5 WidowX robots to improve a language-conditioned policy on 
+            9 different environments, collecting in the process over 25,000 autonomous trajectories in just a matter of a few weeks.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
-
-  </div>
 </section>
 
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+   <h2 class="title is-3">Decomposed Instruction Following Policy</h2>
+   <img id="teaser" src="./static/images/susie_rollout.png" alt="Decomposed Instruction Following Policy" height="100%">
   </div>
+ </section>
+
+ <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns">
+      <div class="column">
+        <div class="content has-text-justified">
+          <p>
+            We insantiate our instruction following policy with <a href="https://rail-berkeley.github.io/susie/">SuSIE</a>, 
+            a language conditioned policy decomposed as a goal conditioned policy and an 
+            <a href="https://www.timothybrooks.com/instruct-pix2pix">InstructPix2Pix</a> style language conditioned 
+            image editing model. Language task commands from the VLM are converted into subgoal images with the diffusion 
+            model, after which the goal conditioned policy is rolled out for a number of timesteps. Then, a new subgoal is 
+            generated with the same language instruction, and the process repeats until the end of the trajectory. 
+          </p>
+          <p>
+            In the context of autonomous improvement, such a formulation is very useful. Semantics are separated from 
+            motor skills, allowing the former to leverage cheap Internet-data and the latter cheap autonomously collected 
+            data. Goal conditioned learning provides a more dense learning signal than language conditioned learning, 
+            and can better leverage suboptimal data. And the goal conditioned policy can be trained with purely 
+            self-supervised objectives, in contrast to a direct language conditioned policy, which would require a separate 
+            model to hindsight relabel autonomous trajectories with language.
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+   <h2 class="title is-3">Improvement Results</h2>
+   <img id="teaser" src="./static/images/improvement_result_1.png" alt="Decomposed Instruction Following Policy" height="100%">
+  </div>
+ </section>
+
+ <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns">
+      <div class="column">
+        <div class="content has-text-justified">
+          <p>
+            To test the improvement capabilities of SOAR, we deploy the system on nine different scenes, and on each 
+            of these scenes evaluate its ability to collect semantically useful autonomous data and subsequently 
+            learn from the data. The ability to improve is a test of both the learning procedure and the data collection 
+            procedure; if data for skills semantically relevant to the downstream tested skills has not been collected, 
+            improvement will not be evident. We find that indeed, SOAR enables improvement for multiple language skills 
+            on each of these nine scenes, with an average success rate improvement of 31%.
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+   <img id="teaser" src="./static/images/improvement_result_2.png" alt="Decomposed Instruction Following Policy" height="100%">
+  </div>
+ </section>
+
+ <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns">
+      <div class="column">
+        <div class="content has-text-justified">
+          <p>
+            We even see positive transfer. When we train a single generalist policy on all of the collected autonomous data 
+            across the nine scenes, average success rate is 7% higher. We also ask the question whether the decomposed 
+            language conditioned policy, GCBC+SuSIE, is really needed. To answer this we train a direct language conditioned behavior cloning (LCBC)
+            policy on the autonomous data collected by GCBC+SuSIE. While improvement is obtained by LCBC, the final performance 
+            of the decomposed policy in SOAR is considerably better. We attribute this to the increased supervision provided by 
+            a goal image than a language instruction, and the better capability of goal conditioned learning to transfer
+            suboptimality in an autonomous trajectory into optimality for reaching the goal that was achieved.
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+   <h2 class="title is-3">SOAR-Data</h2>
+   <img id="teaser" src="./static/images/soar_data.png" alt="Decomposed Instruction Following Policy" height="100%">
+  </div>
+ </section>
+
+ <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns">
+      <div class="column">
+        <div class="content has-text-justified">
+          <p>
+            We also release as a secondary contribution the autonomous dataset collected by our deployment of SOAR.
+            This dataset, SOAR-Data, consists of more than 25,000 trajectories (2.5M transitions) collected with
+            over 50 different sets of objects across 5 different table top setups. Each trajectory in SOAR-Data
+            comes with language annotations (from a VLM), 5 commanded subgoal images generated by SuSIE
+            during one episode, and a task success label predicted by the VLM. SOAR-Data is similar in size
+            compared to other current robotic datasets, but is collected under much smaller time frames (in a
+            matter of weeks) with minimal human effort in the loop. As SOAR-Data consists both of failure and success 
+            trajectories, contains diverse scenes and objects, includes language instructions and 
+            subgoal images, and is collected with a publicly available low-cost robotic arm, we hope it will be a 
+            useful resource for offline reinforcement learning research.
+          </p>
+        </div>
+      </div>
+    </div>
 </section>
 
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
+    <!-- <div class="content has-text-centered">
       <a class="icon-link"
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
@@ -462,21 +401,16 @@
       <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
-    </div>
+    </div> -->
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
+            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>
+            under a 
+            <a rel="license"
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
           </p>
         </div>
       </div>
